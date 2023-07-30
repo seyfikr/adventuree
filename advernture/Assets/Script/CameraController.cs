@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Joystick joystick;
-    public float rotationSpeed = 5f;
+    public float rotationSpeed = 15f;
 
     public void Update()
     {

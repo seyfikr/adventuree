@@ -14,17 +14,21 @@ public class CharacterMove : MonoBehaviour
     private bool isButtonLeft = false;
     public GameObject charecter;
     private float rotationSpeed = 8.5f;
-
+    public bool isUp=false;
+  
     private void Update()
 
     {
+        
         GameObject targetObject = GameObject.Find("character");
         Animator anim = targetObject.GetComponent<Animator>();
         if (isButtonForward)
         {
+            //TouchingWall = false;
             float forward = hiz * Time.deltaTime;
             charecter.transform.Translate(0, 0, forward);
         }
+        
         if (isButtonBack)
         {
             float back = hiz * Time.deltaTime;
@@ -41,19 +45,23 @@ public class CharacterMove : MonoBehaviour
             charecter.transform.Translate(-left, 0, 0);
         }
     }
+   
+
 
     public void ForwardPress()
     {
         isButtonForward = true;
         anim.SetBool("walk", true);
         ÝsRotation();
+        isUp = true;
 
     }
     public void ForwardRelease()
     {
         isButtonForward = false;
         anim.SetBool("walk", false);
-        
+        isUp = false;
+
     }
     public void BackPress()
     {
@@ -105,4 +113,5 @@ public class CharacterMove : MonoBehaviour
             }
         }
     }
+   
 }
