@@ -14,14 +14,18 @@ public class CharacterMove : MonoBehaviour
     private bool isButtonLeft = false;
     public GameObject charecter;
     private float rotationSpeed = 8.5f;
+    public float jumpForce = 5f;
     public bool isUp=false;
-  
+    public Rigidbody rb;
+   
+
     private void Update()
 
     {
         
-        GameObject targetObject = GameObject.Find("character");
+        GameObject targetObject = GameObject.Find("Player");
         Animator anim = targetObject.GetComponent<Animator>();
+        Rigidbody rb =targetObject.GetComponent<Rigidbody>();
         if (isButtonForward)
         {
             //TouchingWall = false;
@@ -99,6 +103,36 @@ public class CharacterMove : MonoBehaviour
         anim.SetBool("walk", false);
         
     }
+    public void Jump()
+    {
+        if (rb.velocity.y == 0)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            //charecter.transform.Translate(0, 1, 0);
+        }
+
+    }
+    public void Attack()
+    {
+        StartCoroutine(AttackAnim());
+    }
+    public void ShieldPress()
+    {
+        anim.SetBool("block", true);
+    }
+    public void ShieldRelease()
+    {
+        anim.SetBool("block", false);
+    }
+    IEnumerator AttackAnim()
+    {
+        anim.SetBool("attack", true);
+        yield return new WaitForSeconds(0.5f);
+
+        anim.SetBool("attack", false);
+    }
+
+
     public void ÝsRotation()
     {
         if (Input.touchCount > 0)

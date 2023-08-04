@@ -14,6 +14,12 @@ ScriptsOnlyBuild:
     - stairwayUp
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -55,16 +61,28 @@ ScriptsOnlyBuild:
     methodName: ForwardRelease
   - assembly: Assembly-CSharp
     fullTypeName: CharacterMove
+    methodName: ShieldPress
+  - assembly: Assembly-CSharp
+    fullTypeName: CharacterMove
+    methodName: ShieldRelease
+  - assembly: Assembly-CSharp
+    fullTypeName: CharacterMove
     methodName: leftPress
   - assembly: Assembly-CSharp
     fullTypeName: CharacterMove
     methodName: leftRelease
   - assembly: Assembly-CSharp
     fullTypeName: CharacterMove
+    methodName: Attack
+  - assembly: Assembly-CSharp
+    fullTypeName: CharacterMove
     methodName: rightPress
   - assembly: Assembly-CSharp
     fullTypeName: CharacterMove
     methodName: rightRelease
+  - assembly: Assembly-CSharp
+    fullTypeName: CharacterMove
+    methodName: Jump
   sceneClasses:
     Assets/AurynSky/Forest Pack/Scenes/DemoScene_Forest.unity:
     - Class: 1
@@ -298,7 +316,7 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
-      Hash: 28b1585e0b902d77b1e0413dbf5d864b
+      Hash: 15e18ddd39dd126abf8ec45b8d8a9e7c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterMove
