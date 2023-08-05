@@ -366,6 +366,7 @@
 "Assets/Script/CharacterMove.cs"
 "Assets/Script/CharacterRotation.cs"
 "Assets/Script/EnemyTrigger.cs"
+"Assets/Script/Shield.cs"
 "Assets/Script/SkeletonNavyMesh.cs"
 "Assets/Script/stairwayUp.cs"
 "Assets/Script/Trigger.cs"

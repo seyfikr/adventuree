@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class SkeletonNavyMesh : MonoBehaviour
 {
     //public Slider Slider;
-
+    CharacterMove CharacterMove;
     Animator anim;
     public float skeletopHP = 100;
     bool skeletonDied;
@@ -17,10 +17,12 @@ public class SkeletonNavyMesh : MonoBehaviour
     float mesafe;
     NavMeshAgent bearnavmsh;
     public float saldirmamesafe;
+    
 
     void Start()
     {
-
+        GameObject gameManager = GameObject.Find("CharacterMove");
+        CharacterMove = gameManager.GetComponent<CharacterMove>();
         anim = GetComponent<Animator>();
         //hedefoyuncu = GameObject.Find("arrow");
         bearnavmsh = this.GetComponent<NavMeshAgent>();
@@ -38,7 +40,7 @@ public class SkeletonNavyMesh : MonoBehaviour
         }
         if (skeletonDied == true)
         {
-            anim.SetBool("died", true);
+            anim.SetBool("deat", true);
             StartCoroutine(yokol());
         }
         else
@@ -50,22 +52,22 @@ public class SkeletonNavyMesh : MonoBehaviour
                 bearnavmsh.isStopped = false;
                 bearnavmsh.SetDestination(hedefoyuncu.transform.position);
                 //yurume
-                anim.SetBool("yuruyor", true);
-                anim.SetBool("hit", false);
+                anim.SetBool("walk", true);
+                anim.SetBool("attack", false);
             }
             else
             {
                 bearnavmsh.isStopped = true;
-                anim.SetBool("yuruyor", false);
-                anim.SetBool("hit", false);
+                anim.SetBool("walk", false);
+                anim.SetBool("attack", false);
             }
             if (mesafe < saldirmamesafe)
             {
                 this.transform.LookAt(hedefoyuncu.transform.position);
                 bearnavmsh.isStopped = true;
                 //vurma
-                anim.SetBool("yuruyor", false);
-                anim.SetBool("hit", true);
+                anim.SetBool("walk", false);
+                anim.SetBool("attack", true);
 
 
 
@@ -78,8 +80,12 @@ public class SkeletonNavyMesh : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Sword"))
         {
-            skeletopHP -= 25;
-            Debug.Log("s0");
+            if (CharacterMove.isAttack == true)
+            {
+                StartCoroutine(HasarAL());
+            }
+          
+            
         }
 
     }
@@ -95,8 +101,17 @@ public class SkeletonNavyMesh : MonoBehaviour
         Destroy(this.gameObject);
         Destroy(this.gameObject);
     }
-    public void HasarAL()
+    IEnumerator HasarAL()
     {
-        skeletopHP -= Random.Range(17f, 25f);
+        anim.SetBool("damage", true);
+        skeletopHP -= 29;
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("damage", false);
     }
+    //public void HasarAL()
+    //{
+    //    anim.SetBool("damage", true)
+
+    //    skeletopHP -= 29;
+    //}
 }

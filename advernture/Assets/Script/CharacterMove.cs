@@ -17,7 +17,8 @@ public class CharacterMove : MonoBehaviour
     public float jumpForce = 5f;
     public bool isUp=false;
     public Rigidbody rb;
-   
+    public  bool isAttack=false;
+
 
     private void Update()
 
@@ -115,6 +116,7 @@ public class CharacterMove : MonoBehaviour
     public void Attack()
     {
         StartCoroutine(AttackAnim());
+        
     }
     public void ShieldPress()
     {
@@ -127,9 +129,11 @@ public class CharacterMove : MonoBehaviour
     IEnumerator AttackAnim()
     {
         anim.SetBool("attack", true);
+        isAttack = true;
         yield return new WaitForSeconds(0.5f);
 
         anim.SetBool("attack", false);
+        isAttack = false;
     }
 
 

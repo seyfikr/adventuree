@@ -12,7 +12,7 @@ public class EnemyTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Sword"))
         {
             enemyHP -= 25;
-            Debug.Log("s0");
+            
         }
 
     }

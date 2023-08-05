@@ -7,7 +7,7 @@ TagManager:
   - Ladder
   - DiePlane
   - Sword
-  - sss
+  - EnemySword
   layers:
   - Default
   - TransparentFX
