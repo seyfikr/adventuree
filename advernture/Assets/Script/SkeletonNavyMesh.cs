@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SkeletonNavyMesh : MonoBehaviour
 {
-    //public Slider Slider;
+    public Slider Slider;
     CharacterMove CharacterMove;
     Animator anim;
     public float skeletopHP = 100;
@@ -32,7 +32,11 @@ public class SkeletonNavyMesh : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Slider.value = bearhp;
+        if (skeletopHP < 1)
+        {
+            Slider.gameObject.SetActive(false);
+        }
+        Slider.value = skeletopHP;
 
         if (skeletopHP <= 0)
         {
@@ -103,10 +107,21 @@ public class SkeletonNavyMesh : MonoBehaviour
     }
     IEnumerator HasarAL()
     {
-        anim.SetBool("damage", true);
-        skeletopHP -= 29;
-        yield return new WaitForSeconds(0.5f);
-        anim.SetBool("damage", false);
+        if (CharacterMove.isPow == false)
+        {
+            anim.SetBool("damage", true);
+            skeletopHP -= 29;
+            yield return new WaitForSeconds(0.5f);
+            anim.SetBool("damage", false);
+        }
+        if (CharacterMove.isPow == true)
+        {
+            anim.SetBool("damage", true);
+            skeletopHP -= 51;
+            yield return new WaitForSeconds(0.5f);
+            anim.SetBool("damage", false);
+        }
+       
     }
     //public void HasarAL()
     //{

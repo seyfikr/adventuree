@@ -1,0 +1,434 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit CoreSingleLanguage' Language: 'tr' Physical Memory: 16263 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\unity\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+D:/GitHub/adventure/advernture
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+57533
+Successfully changed project path to: D:/GitHub/adventure/advernture
+D:/GitHub/adventure/advernture
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 192.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path D:/unity/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitHub/adventure/advernture/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   NVIDIA
+    VRAM:     3949 MB
+    Driver:   31.0.15.2647
+Initialize mono
+Mono path[0] = 'D:/unity/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/unity/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/unity/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/unity/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: D:/unity/2021.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/unity/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005021 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 137.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.069 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1070ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (768ms)
+			LoadAssemblies (133ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (168ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (481ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (86ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (138ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (164ms)
+				ProcessInitializeOnLoadMethodAttributes (90ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006960 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\adventure\advernture\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\adventure\advernture\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.750 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1751ms)
+		BeginReloadAssembly (269ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (133ms)
+		EndReloadAssembly (1310ms)
+			LoadAssemblies (134ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (425ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (587ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (153ms)
+				ProcessInitializeOnLoadAttributes (362ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.19 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3394 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.2 KB). Loaded Objects now: 3859.
+Memory consumption went from 117.8 MB to 117.7 MB.
+Total: 4.120800 ms (FindLiveObjects: 0.349000 ms CreateObjectMapping: 0.234100 ms MarkObjects: 3.385200 ms  DeleteObjects: 0.151400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 588151.477150 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book.prefab
+  artifactKey: Guid(87e534bab4718d7439326c36cd3a448c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book.prefab using Guid(87e534bab4718d7439326c36cd3a448c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f313399b8584afa90c7d6d38cf7af7e') in 0.327294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongPotion_25.prefab
+  artifactKey: Guid(60b2142a511f4b0408fe32d0a6ef5597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongPotion_25.prefab using Guid(60b2142a511f4b0408fe32d0a6ef5597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39c66176501e83aff612ffb66dc7008d') in 0.031869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Base.prefab
+  artifactKey: Guid(1326a9b70425281479e0fab95d509fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Base.prefab using Guid(1326a9b70425281479e0fab95d509fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ab7cd7d7b0ac25d420f751e17960b50') in 0.031123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.008.prefab
+  artifactKey: Guid(e578354a60f27c24ba6b086765a8fdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.008.prefab using Guid(e578354a60f27c24ba6b086765a8fdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92e3a0c4d4d498b1c507a9eac09fead8') in 0.030375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013.prefab
+  artifactKey: Guid(2576efb9203f9fa498ecafe26bc862fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013.prefab using Guid(2576efb9203f9fa498ecafe26bc862fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b75a9f628828df4b2b8544a45049ef') in 0.028495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Earth.prefab
+  artifactKey: Guid(e5854f0558dd1cd479bee15f89757e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Earth.prefab using Guid(e5854f0558dd1cd479bee15f89757e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0672a5f39d5bba2aa4b4edbc1841b5') in 0.033249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.016.prefab
+  artifactKey: Guid(3a36c8cdede383445b8340bd20772a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.016.prefab using Guid(3a36c8cdede383445b8340bd20772a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '466d68ab9151560c8307c3cd7f375fb1') in 0.031112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortHandlePotion.039.prefab
+  artifactKey: Guid(b5ff8dc552229f34cb228eda1032be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortHandlePotion.039.prefab using Guid(b5ff8dc552229f34cb228eda1032be66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b4b0a529fe5d0b307e799fcafd40346') in 0.027994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongPotion_1.prefab
+  artifactKey: Guid(4ebd47e5a47079141940be5854bc9ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongPotion_1.prefab using Guid(4ebd47e5a47079141940be5854bc9ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '719418ad89f4a8cb1cbed65c46e569c9') in 0.028300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.012.prefab
+  artifactKey: Guid(0778feffdbad99241b124082dea58926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.012.prefab using Guid(0778feffdbad99241b124082dea58926) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b066b456f3e9dc7532daee5af0be51') in 0.033893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Air.prefab
+  artifactKey: Guid(7afa4be00176fa24c8023a4c2be13c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Rune_Air.prefab using Guid(7afa4be00176fa24c8023a4c2be13c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a462b03d74e2b848450f75b3a57cce6e') in 0.035138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.010.prefab
+  artifactKey: Guid(52822d25511df2f4daf921b5909e0873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.010.prefab using Guid(52822d25511df2f4daf921b5909e0873) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca9e060457e969ba52804324d80e960') in 0.033748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_1.prefab
+  artifactKey: Guid(a3ae5ee3e1376304d960a69f056fc8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_1.prefab using Guid(a3ae5ee3e1376304d960a69f056fc8d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bdb92b5bd3830edc9c4d77a1f44b4de') in 0.035944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_2.prefab
+  artifactKey: Guid(4cc7771d476b46b47acab7069b9b0ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_2.prefab using Guid(4cc7771d476b46b47acab7069b9b0ded) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e9453d3c504f4426de8ae2df8019c6e') in 0.021494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_3.prefab
+  artifactKey: Guid(ae7643ef11b33c54d82046c802f559ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_3.prefab using Guid(ae7643ef11b33c54d82046c802f559ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '855660ac77399fb2cd4bde3a7491cd90') in 0.021430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Crystal_Ball.prefab
+  artifactKey: Guid(c62d0079cb54a16439441d5b6d2c65f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Crystal_Ball.prefab using Guid(c62d0079cb54a16439441d5b6d2c65f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014ed1900a4c9b4aef429d4373f2fbcb') in 0.019257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.468529 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortHandlePotion.049.prefab
+  artifactKey: Guid(54969b74f86e1134f9f4991a2ed90b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortHandlePotion.049.prefab using Guid(54969b74f86e1134f9f4991a2ed90b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dba4cb1baf02ee9ab8fd83a979e854f3') in 0.024861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_1.prefab
+  artifactKey: Guid(7300e9d6c12632849bd376e42a42a862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_1.prefab using Guid(7300e9d6c12632849bd376e42a42a862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '290f84025499591012c10500c6438fba') in 0.020893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_3.prefab
+  artifactKey: Guid(b8554778482f6344380d7ee0a3c151f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_3.prefab using Guid(b8554778482f6344380d7ee0a3c151f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d8287f377bf8783ce01c818e3ab436') in 0.029490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_18.prefab
+  artifactKey: Guid(09f72c6c0e5d2334882992fd8e9c4137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_18.prefab using Guid(09f72c6c0e5d2334882992fd8e9c4137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60144f9cbc7335e275a27833d78d5f96') in 0.029448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_25.prefab
+  artifactKey: Guid(f4297b0fa37fc1c438a79f380dc9b101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/ShortPotion_25.prefab using Guid(f4297b0fa37fc1c438a79f380dc9b101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2203db4e0dc6e3a227e042d2c1bb16b1') in 0.024902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.013384 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.010 1.prefab
+  artifactKey: Guid(978eb60971dce27419ab2363edd4d865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.010 1.prefab using Guid(978eb60971dce27419ab2363edd4d865) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8f8ccdde282429bbd075b2222ae83a') in 0.032826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_1 1.prefab
+  artifactKey: Guid(76ae5b995962f5a439fd5c7ff63e2b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Potion_1 1.prefab using Guid(76ae5b995962f5a439fd5c7ff63e2b46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00416a7a52eeef971530e547c53de193') in 0.028084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.011 1.prefab
+  artifactKey: Guid(8fc662e633f7e114b880fd733de7dffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.011 1.prefab using Guid(8fc662e633f7e114b880fd733de7dffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3ac9b902089d9fa424bb680f42032f') in 0.033543 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.153011 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book_Solid 1.prefab
+  artifactKey: Guid(0b96cb741212d034eaf13af7ee48286b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book_Solid 1.prefab using Guid(0b96cb741212d034eaf13af7ee48286b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '889234bb2ecd08c732814c9be6741ac3') in 0.022764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013 1.prefab
+  artifactKey: Guid(622c19c753763f941b564970753e4b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013 1.prefab using Guid(622c19c753763f941b564970753e4b54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '176df7b5c64cd30509cbaba8420925eb') in 0.019472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.930670 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Book_Solid.prefab
+  artifactKey: Guid(248c35d3abb5d364290be048e62802ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Book_Solid.prefab using Guid(248c35d3abb5d364290be048e62802ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf2f52eb369b606c89167ad01cf04927') in 0.045945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Potion_18.prefab
+  artifactKey: Guid(41f2beb5a0c6d074a80e1bac82d99831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Potion_18.prefab using Guid(41f2beb5a0c6d074a80e1bac82d99831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c4ba5ccc8e9a5c87a34a6c1d831e199') in 0.035985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Potion_25.prefab
+  artifactKey: Guid(f2d919ab3fc2d7441a09b5ca8c2e509d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Potion_25.prefab using Guid(f2d919ab3fc2d7441a09b5ca8c2e509d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0910f2fc659021a50da20c36da4098') in 0.042265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortHandlePotion.039.prefab
+  artifactKey: Guid(92ec0b93c8845f3449b7914a0e28f75e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortHandlePotion.039.prefab using Guid(92ec0b93c8845f3449b7914a0e28f75e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0064505b8b269f54c3ae191ef1eb7d9f') in 0.033396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.013.prefab
+  artifactKey: Guid(dc7e1d02d9c88984994df03121671074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.013.prefab using Guid(dc7e1d02d9c88984994df03121671074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26630a780ad3f3f6facb99a9db938513') in 0.021473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.016.prefab
+  artifactKey: Guid(b0b1f54868adf0b448e9505f10382984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.016.prefab using Guid(b0b1f54868adf0b448e9505f10382984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3172c72fecce5bfc7fd39c6e5ebe24d') in 0.032329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortHandlePotion.040.prefab
+  artifactKey: Guid(ba01c44392e13f847a837b3b1f17dfdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortHandlePotion.040.prefab using Guid(ba01c44392e13f847a837b3b1f17dfdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fa5f1f8fe60623ae9f65905fb8f0bf1') in 0.020013 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/LongHandlePotion.008.prefab
+  artifactKey: Guid(e1b5af7c945cb144188d6cf5af9c012b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/LongHandlePotion.008.prefab using Guid(e1b5af7c945cb144188d6cf5af9c012b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357717ea02465be518371de8dae5844c') in 0.034023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.015.prefab
+  artifactKey: Guid(b3446ef1d89633e4886048cd257892eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.015.prefab using Guid(b3446ef1d89633e4886048cd257892eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a6c8341a35f6a3cce18b5dd5b7c666') in 0.038700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000092 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/LongPotion_25.prefab
+  artifactKey: Guid(28e618a921fc93443bc5a3373c9e91d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/LongPotion_25.prefab using Guid(28e618a921fc93443bc5a3373c9e91d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ade26e9f305aa07a3024d69cce0c761') in 0.156787 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.024.prefab
+  artifactKey: Guid(7c6a6bbd4a2c40f46b5a201f97f6e143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/HandlePotion.024.prefab using Guid(7c6a6bbd4a2c40f46b5a201f97f6e143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90de50a6382a14a14cb722c9b9a69173') in 0.023008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.297916 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortPotion_1.prefab
+  artifactKey: Guid(3057cbf53695fa641b302c8768c08a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortPotion_1.prefab using Guid(3057cbf53695fa641b302c8768c08a0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61f5708fe9e9b0905def0573bcb896be') in 0.022868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Wand.prefab
+  artifactKey: Guid(987417147569f304d96ef88ce54a895e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/Wand.prefab using Guid(987417147569f304d96ef88ce54a895e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c84d09951b75a6be5f23b846fe5b124') in 0.021303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortPotion_18.prefab
+  artifactKey: Guid(8c61d2a41cfbcc540a0fda41c120c59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Prefabs/ShortPotion_18.prefab using Guid(8c61d2a41cfbcc540a0fda41c120c59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff6963b8fb17eddee66219b2e476738') in 0.012288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.435527 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book_Outline 2.prefab
+  artifactKey: Guid(136bdd077c7cfc1428d0eedd8eadf894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Book_Outline 2.prefab using Guid(136bdd077c7cfc1428d0eedd8eadf894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3fba6af87fcb67b62063948f4abfb0d') in 0.044758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Crystal_Ball 2.prefab
+  artifactKey: Guid(74d5c3b42047b5744bb124fb515e9c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/Crystal_Ball 2.prefab using Guid(74d5c3b42047b5744bb124fb515e9c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f50264616741b6c99d8febdf1bd273') in 0.048591 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013 2.prefab
+  artifactKey: Guid(d3bfa4e59bda46e4993deb44547cc424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/HandlePotion.013 2.prefab using Guid(d3bfa4e59bda46e4993deb44547cc424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4bdac90b24830f5a7f91e5a354d032') in 0.046109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.011 2.prefab
+  artifactKey: Guid(c7cce086b3c14c749be92846243d2f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AGWYN's Low Poly Magical Potions Pack/Prefabs/LongHandlePotion.011 2.prefab using Guid(c7cce086b3c14c749be92846243d2f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0e944374dfa89ee8bc87b414bdf526f') in 0.053509 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

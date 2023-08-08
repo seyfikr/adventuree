@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class CharacterMove : MonoBehaviour
 {
+    [SerializeField] public ParticleSystem powParticle;
+    [SerializeField] public bool isPow=false;
     [SerializeField] private Animator anim;
     public float hiz = 3f;
     private bool isButtonForward = false;
@@ -18,6 +20,7 @@ public class CharacterMove : MonoBehaviour
     public bool isUp=false;
     public Rigidbody rb;
     public  bool isAttack=false;
+    [SerializeField] public bool isBlock = false;
 
 
     private void Update()
@@ -121,10 +124,16 @@ public class CharacterMove : MonoBehaviour
     public void ShieldPress()
     {
         anim.SetBool("block", true);
+        isBlock=true;
     }
     public void ShieldRelease()
     {
         anim.SetBool("block", false);
+        isBlock=false;
+    }
+    public void Pow()
+    {
+        StartCoroutine(PowIem());
     }
     IEnumerator AttackAnim()
     {
@@ -134,6 +143,14 @@ public class CharacterMove : MonoBehaviour
 
         anim.SetBool("attack", false);
         isAttack = false;
+    }
+    IEnumerator PowIem()
+    {
+        isPow=true;
+        powParticle.gameObject.SetActive(true);
+        yield return new WaitForSeconds(25f);
+        powParticle.gameObject.SetActive(false);
+        isPow = false;
     }
 
 

@@ -13,12 +13,20 @@ public class Shield : MonoBehaviour
        
         if (collision.gameObject.CompareTag("EnemySword"))
         {
-           isShield = true;
-            //Debug.Log("shýld");
+            //isShield = true;
+            // Debug.Log("shýld");
+            StartCoroutine(Shieldd());
         }
-        else
-        {
-            isShield = false;
-        }
+        //else
+        //{
+        //    isShield = false;
+        //}
+    }
+    IEnumerator Shieldd()
+    {
+        isShield = true;
+        yield return new WaitForSeconds(0.8f);
+
+        isShield = false;
     }
 }
