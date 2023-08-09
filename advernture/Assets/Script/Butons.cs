@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Butons : MonoBehaviour
 {
@@ -18,5 +19,10 @@ public class Butons : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void restart()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 }

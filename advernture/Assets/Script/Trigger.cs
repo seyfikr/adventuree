@@ -10,16 +10,22 @@ public class Trigger : MonoBehaviour
     public Slider Slider;
     Shield shield;
     CharacterMove CharacterMove;
+    [SerializeField] private static int keyNumber = 0;
+    [SerializeField] public GameObject key1, key2, key3;
+    
     public void Start()
     {
         GameObject gameManager = GameObject.Find("ShieldCube");
         shield = gameManager.GetComponent<Shield>();
         GameObject gameManager2 = GameObject.Find("CharacterMove");
         CharacterMove = gameManager2.GetComponent<CharacterMove>();
+        
+
     }
     private void Update()
     {
         Slider.value = Hp;
+        
     }
     [SerializeField] private int Hp = 100;
     private void OnCollisionEnter(Collision collision)
@@ -30,7 +36,7 @@ public class Trigger : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("EnemySword"))
         {
-            print("easd");
+           
             if (shield.isShield == true/*&&CharacterMove.isBlock==true*/)
             {
                 //Hp += 20;
@@ -46,12 +52,43 @@ public class Trigger : MonoBehaviour
                 {
                     Hp -= 10;
                 }
-                
-                
+           
+            }
 
+        }
+        if (collision.gameObject.CompareTag("Key"))
+        {
+            
+            if(keyNumber == 0)
+            {
+                key1.SetActive(true);
+
+                Destroy(collision.gameObject);
+                StartCoroutine(Key());
+            }
+            if (keyNumber == 1)
+            {
+                key2.SetActive(true);
+
+                Destroy(collision.gameObject);
+                StartCoroutine(Key());
+            }
+            if (keyNumber == 2)
+            {
+                key3.SetActive(true);
+
+                Destroy(collision.gameObject);
+                StartCoroutine(Key());
             }
         }
 
     }
+    IEnumerator Key()
+    {
+        yield return new WaitForSeconds(2);
+        keyNumber++;
+        
+    }
+    
    
 }

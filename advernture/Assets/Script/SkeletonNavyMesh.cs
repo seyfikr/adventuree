@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SkeletonNavyMesh : MonoBehaviour
 {
+    
     public Slider Slider;
     CharacterMove CharacterMove;
     Animator anim;
@@ -44,14 +45,14 @@ public class SkeletonNavyMesh : MonoBehaviour
         {
             skeletonDied = true;
             Slider.gameObject.SetActive(false);
-
+            //isKey= true;
             StartCoroutine(ÝSkey());
         }
         if (skeletonDied == true)
         {
             anim.SetBool("deat", true);
             StartCoroutine(yokol());
-            keySpawm();
+            //keySpawm();
         }
         else
         {
@@ -86,21 +87,25 @@ public class SkeletonNavyMesh : MonoBehaviour
         }
 
     }
-    private void keySpawm()
-    {
-        if (isKey == true)
-        {
-            Vector3 dusmanPozisyon = transform.position;
-            Instantiate(key, dusmanPozisyon, Quaternion.identity);
-            isKey = false;
-        }
-    }
+    //private void keySpawm()
+    //{
+    //    if (isKey == true)
+    //    {
+    //        Vector3 dusmanPozisyon = transform.position;
+    //        Instantiate(key, dusmanPozisyon, Quaternion.identity);
+    //        isKey = false;
+    //    }
+    //}
     IEnumerator ÝSkey()
     {
-        isKey=true;
-        yield return new WaitForSeconds(0.1f);
-        isKey = false;
-        yield return new WaitForSeconds(5f);
+        if (!isKey)
+        {
+            print("spawmþla");
+            Vector3 dusmanPozisyon = transform.position+ new Vector3(0.5f,1.2f,0.4f);
+            Instantiate(key, dusmanPozisyon, Quaternion.identity);
+            isKey = true;
+        }
+        yield return new WaitForSeconds(6f);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -113,6 +118,7 @@ public class SkeletonNavyMesh : MonoBehaviour
           
             
         }
+
 
     }
     //public void HasarVer()
