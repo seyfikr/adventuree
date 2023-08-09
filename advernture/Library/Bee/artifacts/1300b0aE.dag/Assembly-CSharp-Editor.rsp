@@ -373,8 +373,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
-"Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
+"Assets/Asset/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs"
+"Assets/Asset/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
 -langversion:9.0
 
 /deterministic

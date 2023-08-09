@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class ChestDemo : MonoBehaviour
 {
+    public GameObject PowButton;
 
-    //This script goes on the ChestComplete prefab;
+    
 
-    public Animator chestAnim; //Animator for the chest;
+    public Animator chestAnim; 
 
-    // Use this for initialization
+    
     void Awake()
     {
-        //get the Animator component from the chest;
+        
         chestAnim = GetComponent<Animator>();
+        PowButton.SetActive(false);
 
-        //StartCoroutine(OpenCloseChest());
+      
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,24 +26,12 @@ public class ChestDemo : MonoBehaviour
         {
             //StartCoroutine(OpenCloseChest());
             chestAnim.SetTrigger("open");
+            PowButton.SetActive(true);
         }
     }
 
 
-        //IEnumerator OpenCloseChest()
-        //{
-        //    //play open animation;
-        //    chestAnim.SetTrigger("open");
-        //    //wait 2 seconds;
-        //    yield return new WaitForSeconds(2);
-        //    //play close animation;
-        //    chestAnim.SetTrigger("close");
-        //    //wait 2 seconds;
-        //    yield return new WaitForSeconds(2);
-        //    //Do it again;
-        //    StartCoroutine(OpenCloseChest());
-
-        //}
+   
     }
 
 

@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour
     public Rigidbody rb;
     public  bool isAttack=false;
     [SerializeField] public bool isBlock = false;
-
+    ChestDemo ChestDemo;
 
     private void Update()
 
@@ -30,6 +30,8 @@ public class CharacterMove : MonoBehaviour
         GameObject targetObject = GameObject.Find("Player");
         Animator anim = targetObject.GetComponent<Animator>();
         Rigidbody rb =targetObject.GetComponent<Rigidbody>();
+        GameObject gameManager = GameObject.Find("ForestChestTop");
+        ChestDemo = gameManager.GetComponent<ChestDemo>();
         if (isButtonForward)
         {
             //TouchingWall = false;
@@ -134,6 +136,8 @@ public class CharacterMove : MonoBehaviour
     public void Pow()
     {
         StartCoroutine(PowIem());
+        ChestDemo.PowButton.SetActive(false);
+
     }
     IEnumerator AttackAnim()
     {

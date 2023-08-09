@@ -15,8 +15,10 @@ public class SkeletonNavyMesh : MonoBehaviour
     public Transform hedefoyuncu;
     public float kovalamamesafe;
     float mesafe;
-    NavMeshAgent bearnavmsh;
+    NavMeshAgent skeletonNavymash;
     public float saldirmamesafe;
+    public GameObject key;
+    private bool isKey=false;
     
 
     void Start()
@@ -24,28 +26,32 @@ public class SkeletonNavyMesh : MonoBehaviour
         GameObject gameManager = GameObject.Find("CharacterMove");
         CharacterMove = gameManager.GetComponent<CharacterMove>();
         anim = GetComponent<Animator>();
-        //hedefoyuncu = GameObject.Find("arrow");
-        bearnavmsh = this.GetComponent<NavMeshAgent>();
+
+        skeletonNavymash = this.GetComponent<NavMeshAgent>();
 
     }
 
 
     void FixedUpdate()
     {
-        if (skeletopHP < 1)
-        {
-            Slider.gameObject.SetActive(false);
-        }
+        //if (skeletopHP < 1)
+        //{
+        //    Slider.gameObject.SetActive(false);
+        //}
         Slider.value = skeletopHP;
 
-        if (skeletopHP <= 0)
+        if (skeletopHP <= 1)
         {
             skeletonDied = true;
+            Slider.gameObject.SetActive(false);
+
+            StartCoroutine(ÝSkey());
         }
         if (skeletonDied == true)
         {
             anim.SetBool("deat", true);
             StartCoroutine(yokol());
+            keySpawm();
         }
         else
         {
@@ -53,22 +59,22 @@ public class SkeletonNavyMesh : MonoBehaviour
             if (mesafe < kovalamamesafe)
             {
                 this.transform.LookAt(hedefoyuncu.transform.position);
-                bearnavmsh.isStopped = false;
-                bearnavmsh.SetDestination(hedefoyuncu.transform.position);
+                skeletonNavymash.isStopped = false;
+                skeletonNavymash.SetDestination(hedefoyuncu.transform.position);
                 //yurume
                 anim.SetBool("walk", true);
                 anim.SetBool("attack", false);
             }
             else
             {
-                bearnavmsh.isStopped = true;
+                skeletonNavymash.isStopped = true;
                 anim.SetBool("walk", false);
                 anim.SetBool("attack", false);
             }
             if (mesafe < saldirmamesafe)
             {
                 this.transform.LookAt(hedefoyuncu.transform.position);
-                bearnavmsh.isStopped = true;
+                skeletonNavymash.isStopped = true;
                 //vurma
                 anim.SetBool("walk", false);
                 anim.SetBool("attack", true);
@@ -79,6 +85,22 @@ public class SkeletonNavyMesh : MonoBehaviour
             }
         }
 
+    }
+    private void keySpawm()
+    {
+        if (isKey == true)
+        {
+            Vector3 dusmanPozisyon = transform.position;
+            Instantiate(key, dusmanPozisyon, Quaternion.identity);
+            isKey = false;
+        }
+    }
+    IEnumerator ÝSkey()
+    {
+        isKey=true;
+        yield return new WaitForSeconds(0.1f);
+        isKey = false;
+        yield return new WaitForSeconds(5f);
     }
     private void OnCollisionEnter(Collision collision)
     {
