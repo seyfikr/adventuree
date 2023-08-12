@@ -10,8 +10,9 @@ public class BossNavymesh : MonoBehaviour
     public Slider Slider;
     CharacterMove CharacterMove;
     Animator anim;
-    public float BossHp = 200;
-    bool BossDied;
+    public Animator DoorAnim;
+    public float BossHp = 800;
+    [SerializeField] public bool BossDied;
     public Transform TargetPlayer;
     public float chaseRange;
     float range;
@@ -26,6 +27,7 @@ public class BossNavymesh : MonoBehaviour
         GameObject gameManager = GameObject.Find("CharacterMove");
         CharacterMove = gameManager.GetComponent<CharacterMove>();
         anim = GetComponent<Animator>();
+        //DoorAnim = GetComponent<Animator>();
 
         skeletonNavymash = this.GetComponent<NavMeshAgent>();
 
@@ -61,6 +63,7 @@ public class BossNavymesh : MonoBehaviour
                 //yurume
                 anim.SetBool("Walk", true);
                 anim.SetBool("Attack", false);
+                DoorAnim.SetBool("Door",false);
             }
             else
             {
@@ -134,7 +137,7 @@ public class BossNavymesh : MonoBehaviour
         if (CharacterMove.isPow == true)
         {
             anim.SetBool("damage", true);
-            BossHp -= 51;
+            BossHp -= 80;
             yield return new WaitForSeconds(0.5f);
             anim.SetBool("damage", false);
         }

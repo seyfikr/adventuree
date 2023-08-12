@@ -12,7 +12,7 @@ public class SkeletonNavyMesh : MonoBehaviour
     CharacterMove CharacterMove;
     Animator anim;
     public float skeletopHP = 100;
-    bool skeletonDied;
+    [SerializeField] public bool skeletonDied;
     public Transform hedefoyuncu;
     public float kovalamamesafe;
     float mesafe;
@@ -89,7 +89,7 @@ public class SkeletonNavyMesh : MonoBehaviour
     {
         if (!isKey)
         {
-            print("spawmþla");
+            
             Vector3 dusmanPozisyon = transform.position+ new Vector3(0.5f,1.2f,0.4f);
             Instantiate(key, dusmanPozisyon, Quaternion.identity);
             isKey = true;

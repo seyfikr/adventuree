@@ -22,7 +22,7 @@ public class stairwayUp : MonoBehaviour
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isLadder = true;
-            print(" buldu");
+            
         }
        
     }
@@ -31,7 +31,7 @@ public class stairwayUp : MonoBehaviour
         if (collision.gameObject.CompareTag("Ladder"))
         {
             isLadder = false;
-            print(" çýktý");
+           
         }
 
     }
@@ -39,7 +39,7 @@ public class stairwayUp : MonoBehaviour
     {
         if (isLadder&&characterMove.isUp)
         {
-            print("calýsmasý gerek");
+            
             //float verticalInput = Input.GetAxis("Vertical");
             //Character.transform.position += Vector3.up * verticalInput * týrmanmaHizi * Time.deltaTime;
             StartCoroutine(LadderUp());

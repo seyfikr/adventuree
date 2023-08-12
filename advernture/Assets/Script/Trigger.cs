@@ -8,6 +8,7 @@ using JetBrains.Annotations;
 
 public class Trigger : MonoBehaviour
 {
+    SkeletonNavyMesh SkeletonNavyMesh;
     BossNavymesh bossNavymesh;
     public Slider Slider;
     Shield shield;
@@ -17,11 +18,15 @@ public class Trigger : MonoBehaviour
     [SerializeField] public Animator anim;
     [SerializeField] public GameObject cam;
     private bool bossDamage=false;
+    [SerializeField] public Animator BossAnim;
+    
 
     public void Start()
     {
         GameObject gameManager = GameObject.Find("ShieldCube");
         shield = gameManager.GetComponent<Shield>();
+        GameObject gameManager4 = GameObject.Find("Skeleton");
+        SkeletonNavyMesh = gameManager4.GetComponent<SkeletonNavyMesh>();
         GameObject gameManager3 = GameObject.Find("Boss");
         bossNavymesh = gameManager3.GetComponent<BossNavymesh>();
         GameObject gameManager2 = GameObject.Find("CharacterMove");
@@ -31,7 +36,7 @@ public class Trigger : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(bossNavymesh.bossDamage);
+        
         Slider.value = Hp;
         
         if (keyNumber == 3)
@@ -60,15 +65,26 @@ public class Trigger : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        if(collision.gameObject.CompareTag("EnemySword"))
+        
+        if (collision.gameObject.CompareTag("HP"))
+        {
+            Hp += 50;
+            Destroy(collision.gameObject);
+            if (Hp > 100)
+            {
+                Hp = 100;
+            }
+                    
+        }
+        if (collision.gameObject.CompareTag("EnemySword"))
         {
            
-            if (shield.isShield == true/*&&CharacterMove.isBlock==true*/)
+            if (shield.isShield == true)
             {
                 //Hp += 20;
                 //Debug.Log("a");
             }
-            else if  (shield.isShield == false && CharacterMove.isBlock == false)
+            else if  (shield.isShield == false && CharacterMove.isBlock == false && SkeletonNavyMesh.skeletonDied == false)
             {
                 if (CharacterMove.isPow == false)
                 {
@@ -91,7 +107,7 @@ public class Trigger : MonoBehaviour
                 //Hp += 20;
                 //Debug.Log("a");
             }
-            else if (shield.isShield == false && CharacterMove.isBlock == false)
+            else if (shield.isShield == false && CharacterMove.isBlock == false&& bossNavymesh.BossDied==false)
             {
                 if (CharacterMove.isPow == false)
                 {
@@ -152,6 +168,11 @@ public class Trigger : MonoBehaviour
 
         }
         yield return new WaitForSeconds(3);
+
+        BossAnim.SetBool("Scream", true);
+        yield return new WaitForSeconds(2.5f);
+        BossAnim.SetBool("Scream", false);
+
         cam.SetActive(false);
 
     }
