@@ -35,10 +35,7 @@ public class SkeletonNavyMesh : MonoBehaviour
 
     void FixedUpdate()
     {
-        //if (skeletopHP < 1)
-        //{
-        //    Slider.gameObject.SetActive(false);
-        //}
+       
         Slider.value = skeletopHP;
 
         if (skeletopHP <= 1)
@@ -52,7 +49,7 @@ public class SkeletonNavyMesh : MonoBehaviour
         {
             anim.SetBool("deat", true);
             StartCoroutine(yokol());
-            //keySpawm();
+            
         }
         else
         {
@@ -87,15 +84,7 @@ public class SkeletonNavyMesh : MonoBehaviour
         }
 
     }
-    //private void keySpawm()
-    //{
-    //    if (isKey == true)
-    //    {
-    //        Vector3 dusmanPozisyon = transform.position;
-    //        Instantiate(key, dusmanPozisyon, Quaternion.identity);
-    //        isKey = false;
-    //    }
-    //}
+   
     IEnumerator ÝSkey()
     {
         if (!isKey)
@@ -121,12 +110,7 @@ public class SkeletonNavyMesh : MonoBehaviour
 
 
     }
-    //public void HasarVer()
-    //{
-
-    //    hedefoyuncu.GetComponent<karakter_hareket>().hasaral();
-
-    //}
+  
     IEnumerator yokol()
     {
         yield return new WaitForSeconds(5);
@@ -151,10 +135,5 @@ public class SkeletonNavyMesh : MonoBehaviour
         }
        
     }
-    //public void HasarAL()
-    //{
-    //    anim.SetBool("damage", true)
-
-    //    skeletopHP -= 29;
-    //}
+  
 }
