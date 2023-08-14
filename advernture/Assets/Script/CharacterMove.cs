@@ -23,6 +23,10 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] public bool isBlock = false;
     ChestDemo ChestDemo;
 
+    [Header("Sound")]
+    [SerializeField] AudioSource walkSound;
+    [SerializeField] AudioSource swordSound;
+    [SerializeField] AudioSource jumpSound;
     private void Update()
 
     {
@@ -64,6 +68,7 @@ public class CharacterMove : MonoBehaviour
         anim.SetBool("walk", true);
         ÝsRotation();
         isUp = true;
+        walkSound.Play();
 
     }
     public void ForwardRelease()
@@ -71,46 +76,50 @@ public class CharacterMove : MonoBehaviour
         isButtonForward = false;
         anim.SetBool("walk", false);
         isUp = false;
-
+        walkSound.Stop();
     }
     public void BackPress()
     {
         isButtonBack = true;
         anim.SetBool("walk", true);
         ÝsRotation();
+        walkSound.Play();
     }
     public void BackRelease()
     {
         isButtonBack = false;
         anim.SetBool("walk", false);
-        
+        walkSound.Stop();
     }
     public void rightPress()
     {
         isButtonRight = true;
         anim.SetBool("walk", true);
         ÝsRotation();
+        walkSound.Play();
     }
     public void rightRelease()
     {
         isButtonRight = false;
         anim.SetBool("walk", false);
-        
+        walkSound.Stop();
     }
     public void leftPress()
     {
         isButtonLeft = true;
         anim.SetBool("walk", true);
         ÝsRotation();
+        walkSound.Play();
     }
     public void leftRelease()
     {
         isButtonLeft = false;
         anim.SetBool("walk", false);
-        
+        walkSound.Stop();
     }
     public void Jump()
     {
+        jumpSound.Play();
         if (rb.velocity.y == 0)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -142,11 +151,13 @@ public class CharacterMove : MonoBehaviour
     IEnumerator AttackAnim()
     {
         anim.SetBool("attack", true);
+        swordSound.Play();
         isAttack = true;
         yield return new WaitForSeconds(0.5f);
 
         anim.SetBool("attack", false);
         isAttack = false;
+        swordSound.Stop();
     }
     IEnumerator PowIem()
     {

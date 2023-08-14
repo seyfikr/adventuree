@@ -21,6 +21,9 @@ public class BossNavymesh : MonoBehaviour
     //public GameObject key;
     //private bool isKey = false;
     public bool bossDamage = false;
+    [Header("Sound")]
+    [SerializeField] AudioSource monsterAttack;
+    [SerializeField] AudioSource damageSound;
 
     void Start()
     {
@@ -78,6 +81,7 @@ public class BossNavymesh : MonoBehaviour
                 //vurma
                 anim.SetBool("Walk", false);
                 anim.SetBool("Attack", true);
+                monsterAttack.Play();
 
 
 
@@ -129,15 +133,17 @@ public class BossNavymesh : MonoBehaviour
     {
         if (CharacterMove.isPow == false)
         {
+            damageSound.Play();
             anim.SetBool("damage", true);
-            BossHp -= 29;
+            BossHp -= 19;
             yield return new WaitForSeconds(0.5f);
             anim.SetBool("damage", false);
         }
         if (CharacterMove.isPow == true)
         {
+            damageSound.Play();
             anim.SetBool("damage", true);
-            BossHp -= 80;
+            BossHp -= 60;
             yield return new WaitForSeconds(0.5f);
             anim.SetBool("damage", false);
         }

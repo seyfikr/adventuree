@@ -19,7 +19,10 @@ public class Trigger : MonoBehaviour
     [SerializeField] public GameObject cam;
     private bool bossDamage=false;
     [SerializeField] public Animator BossAnim;
-    
+    [Header("Sound")]
+    [SerializeField] AudioSource playerDamage;
+    [SerializeField] AudioSource monsterRoar;
+
 
     public void Start()
     {
@@ -89,10 +92,12 @@ public class Trigger : MonoBehaviour
                 if (CharacterMove.isPow == false)
                 {
                     Hp -= 20;
+                    playerDamage.Play();
                 }
                 if (CharacterMove.isPow == true)
                 {
                     Hp -= 10;
+                    playerDamage.Play();
                 }
            
             }
@@ -112,10 +117,12 @@ public class Trigger : MonoBehaviour
                 if (CharacterMove.isPow == false)
                 {
                     Hp -= 30;
+                    playerDamage.Play();
                 }
                 if (CharacterMove.isPow == true)
                 {
                     Hp -= 10;
+                    playerDamage.Play();
                 }
 
             }
@@ -168,7 +175,8 @@ public class Trigger : MonoBehaviour
 
         }
         yield return new WaitForSeconds(3);
-
+        monsterRoar.Play();
+        
         BossAnim.SetBool("Scream", true);
         yield return new WaitForSeconds(2.5f);
         BossAnim.SetBool("Scream", false);

@@ -7,20 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class SkeletonNavyMesh : MonoBehaviour
 {
-    
+    [Header("Float")]
+    public float skeletopHP = 100;
+    public float saldirmamesafe;
+    public float kovalamamesafe;
+    float mesafe;
+
     public Slider Slider;
     CharacterMove CharacterMove;
     Animator anim;
-    public float skeletopHP = 100;
     [SerializeField] public bool skeletonDied;
-    public Transform hedefoyuncu;
-    public float kovalamamesafe;
-    float mesafe;
+    public Transform hedefoyuncu;  
     NavMeshAgent skeletonNavymash;
-    public float saldirmamesafe;
     public GameObject key;
     private bool isKey=false;
-    
+
+    [Header("Sound")]
+    [SerializeField] AudioSource damageSound;
+
 
     void Start()
     {
@@ -121,17 +125,21 @@ public class SkeletonNavyMesh : MonoBehaviour
     {
         if (CharacterMove.isPow == false)
         {
+            damageSound.Play();
             anim.SetBool("damage", true);
             skeletopHP -= 29;
             yield return new WaitForSeconds(0.5f);
             anim.SetBool("damage", false);
+            damageSound.Stop();
         }
         if (CharacterMove.isPow == true)
         {
+            damageSound.Play();
             anim.SetBool("damage", true);
             skeletopHP -= 51;
             yield return new WaitForSeconds(0.5f);
             anim.SetBool("damage", false);
+            damageSound.Stop();
         }
        
     }
