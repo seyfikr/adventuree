@@ -24,14 +24,13 @@ public class BossNavymesh : MonoBehaviour
     [Header("Sound")]
     [SerializeField] AudioSource monsterAttack;
     [SerializeField] AudioSource damageSound;
-
+    [Header("Panel")]
+    [SerializeField] public GameObject SuccesPanel;
     void Start()
     {
         GameObject gameManager = GameObject.Find("CharacterMove");
         CharacterMove = gameManager.GetComponent<CharacterMove>();
-        anim = GetComponent<Animator>();
-        //DoorAnim = GetComponent<Animator>();
-
+        anim = GetComponent<Animator>();  
         skeletonNavymash = this.GetComponent<NavMeshAgent>();
 
     }
@@ -46,8 +45,9 @@ public class BossNavymesh : MonoBehaviour
         {
             BossDied = true;
             Slider.gameObject.SetActive(false);
-            //isKey= true;
-            //StartCoroutine(ÝSkey());
+            SuccesPanel.SetActive(true);
+            Time.timeScale = 0;
+           
         }
         if (BossDied == true)
         {
@@ -63,7 +63,7 @@ public class BossNavymesh : MonoBehaviour
                 this.transform.LookAt(TargetPlayer.transform.position);
                 skeletonNavymash.isStopped = false;
                 skeletonNavymash.SetDestination(TargetPlayer.transform.position);
-                //yurume
+                //walk
                 anim.SetBool("Walk", true);
                 anim.SetBool("Attack", false);
                 DoorAnim.SetBool("Door",false);
@@ -78,7 +78,7 @@ public class BossNavymesh : MonoBehaviour
             {
                 this.transform.LookAt(TargetPlayer.transform.position);
                 skeletonNavymash.isStopped = true;
-                //vurma
+                //hit
                 anim.SetBool("Walk", false);
                 anim.SetBool("Attack", true);
                 monsterAttack.Play();
@@ -91,17 +91,7 @@ public class BossNavymesh : MonoBehaviour
 
     }
 
-    //IEnumerator ÝSkey()
-    //{
-    //    if (!isKey)
-    //    {
-    //        print("spawmþla");
-    //        Vector3 dusmanPozisyon = transform.position + new Vector3(0.5f, 1.2f, 0.4f);
-    //        Instantiate(key, dusmanPozisyon, Quaternion.identity);
-    //        isKey = true;
-    //    }
-    //    yield return new WaitForSeconds(6f);
-    //}
+ 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Sword"))

@@ -16,12 +16,18 @@ public class Trigger : MonoBehaviour
     [SerializeField] private static int keyNumber = 0;
     [SerializeField] public GameObject key1, key2, key3;
     [SerializeField] public Animator anim;
+    
     [SerializeField] public GameObject cam;
     private bool bossDamage=false;
     [SerializeField] public Animator BossAnim;
     [Header("Sound")]
     [SerializeField] AudioSource playerDamage;
     [SerializeField] AudioSource monsterRoar;
+    [Header("Panel")]
+    [SerializeField] public GameObject gameOverPanel;
+
+
+
 
 
     public void Start()
@@ -39,6 +45,11 @@ public class Trigger : MonoBehaviour
     }
     private void Update()
     {
+        if (Hp < 1)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0;
+        }
         
         Slider.value = Hp;
         
